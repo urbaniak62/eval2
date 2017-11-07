@@ -1,6 +1,6 @@
 <?php
 require_once('pdo.php');
-require_once('compteClass.php');
+require_once('compte.Class.php');
 
 class Manager{
   private $_crud;
@@ -22,20 +22,37 @@ class Manager{
   // ----------------------
 
   public function insert($insert){
-    $req=connection()->prepare('INSERT INTO compte(name,sold)
-        VALUES(:name,:sold)');
+    $req=connection()->prepare('INSERT INTO compte(id,name,sold)
+        VALUES(:id,:name,:sold)');
 
         $req->execute(array(
+  'id'=>$insert->getId(),
   'name'=>$insert->getName(),
   'sold'=>$insert->getSold()
 ));
 }
-// -----------------methode selection
+// -----------------methode select
 // -----------------------------------
-  public function select($select){
+  public function select(){
     $req=connection()->query('SELECT * FROM compte');
 
   $compte=$req->fetchAll(PDO::FETCH_ASSOC);
   return $compte;
   }
+
+  // ---------------methode update
+  // -------------------------------
+  public function update($compte){
+
+  }
+
+  // ---------------methode delete
+  // ---------------------------------
+
+  public function delete($id){
+  $req=connection()->prepare('DELETE  FROM compte WHERE id=:id');
+  $req->execute(array(
+    'id'=>$id
+  ));
+ }
 }
