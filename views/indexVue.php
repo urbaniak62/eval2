@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <p>C'est la vue de l'index</p>
-    <?php echo $my_client->getProducts()[0]->getName(); ?>
-  </body>
-</html>
+<?php
+  include("template/header.php")
+ ?>
+
+ <table class="centered">
+         <thead>
+           <tr>
+               <th>number of compte</th>
+               <th>Name</th>
+               <th>solde</th>
+           </tr>
+         </thead>
+
+         <?php foreach ($compte as $key => $cpt): ?>
+           <tbody>
+             <tr>
+               <td>1</td>
+               <td>urbaniak</td>
+               <td>150</td>
+             </tr>
+           </tbody>
+         </table>
+         <?php endforeach; ?>
+         
+ <?php
+   include("template/footer.php")
+  ?>
