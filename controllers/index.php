@@ -8,6 +8,6 @@ $manager1=new Manager('crud');
 
 $compte=$manager1->select();
 
-var_dump($manager1);
+// var_dump($manager1);
 include "../views/indexVue.php";
  ?>

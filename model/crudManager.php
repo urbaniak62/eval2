@@ -43,7 +43,13 @@ class Manager{
   // ---------------methode update
   // -------------------------------
   public function update($compte){
-
+    $req=connection()->prepare('UPDATE compte SET id = :id, name= :name, sold= :sold WHERE id= :id');
+    $req->execute(array(
+      'id'=>$compte->getId(),
+      'name'=>$compte->getName(),
+      'sold'=>$compte->getSold()
+      
+    ));
   }
 
   // ---------------methode delete

@@ -3,20 +3,20 @@
  ?>
 
  <table class="centered">
-         <!-- <thead> -->
+         <thead>
            <tr>
                <th>number of compte</th>
                <th>Name</th>
                <th>solde</th>
            </tr>
-         <!-- </thead> -->
+         </thead>
 
          <?php foreach ($compte as $cpt): ?>
-           <tbody>
+           <tbody >
              <tr>
-               <td><?php echo $cpt['id']  ?></td>
-               <td><?php echo $cpt['name'] ?></td>
-               <td><?php echo $cpt['sold'] ?></td>
+               <td><?php echo $cpt['id'];  ?></td>
+               <td><?php echo $cpt['name']; ?></td>
+               <td><?php echo $cpt['sold']; ?></td>
              </tr>
            </tbody>
           <?php endforeach; ?>
@@ -28,12 +28,14 @@
              <a href="transfert.php">execute transfert</a>
              <a href="delete.php">delete</a>
            </div>
-           <select class="choice" name="id">
-             <option value="1">1</option>
 
+           <select class="choice" name="id">
+        <?php foreach ($compte as $cpt): ?>
+             <option value="id"><?php echo $cpt['id']; ?></option>
+         <?php endforeach; ?>
            </select>
 
 
- <!-- <?php
+  <?php
    include("template/footer.php")
-  ?> -->
+  ?>
