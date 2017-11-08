@@ -10,7 +10,7 @@ require_once('crudManager.php');
   // -------------contructeur
   // ---------------------------
 
-  public function __construc(array $donne){
+  public function __construct(array $donne){
     $this->hydrate($donne);
   }
 

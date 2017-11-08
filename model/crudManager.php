@@ -22,19 +22,19 @@ class Manager{
   // ----------------------
 
   public function insert($insert){
-    $req=connection()->prepare('INSERT INTO compte(id,name,sold)
-        VALUES(:id,:name,:sold)');
+    $req=connection()->prepare('INSERT INTO compte(name,sold)
+        VALUES(:name,:sold)');
 
         $req->execute(array(
-  'id'=>$insert->getId(),
-  'name'=>$insert->getName(),
-  'sold'=>$insert->getSold()
+  ':name'=>$insert->getName(),
+  ':sold'=>$insert->getSold()
 ));
 }
 // -----------------methode select
 // -----------------------------------
   public function select(){
-    $req=connection()->query('SELECT * FROM compte');
+    $req=connection()->query('SELECT * FROM compte ');
+
 
   $compte=$req->fetchAll(PDO::FETCH_ASSOC);
   return $compte;
@@ -48,7 +48,7 @@ class Manager{
       'id'=>$compte->getId(),
       'name'=>$compte->getName(),
       'sold'=>$compte->getSold()
-      
+
     ));
   }
 

@@ -2,7 +2,7 @@
   include("template/header.php")
  ?>
 
- <table class="centered">
+ <table class="centered bordered striped">
          <thead>
            <tr>
                <th>number of compte</th>
@@ -23,17 +23,14 @@
   </table>
 
 
-           <div class="action">
-             <a href="send.php">send money</a>
-             <a href="transfert.php">execute transfert</a>
-             <a href="delete.php">delete</a>
-           </div>
+    <a class='dropdown-button btn red accent-4' href='#' data-activates='dropdown1'>select account</a>
 
-           <select class="choice" name="id">
-        <?php foreach ($compte as $cpt): ?>
-             <option value="id"><?php echo $cpt['id']; ?></option>
-         <?php endforeach; ?>
-           </select>
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content '>
+      <?php foreach ($compte as $cpt): ?>
+    <li><a href="../controllers/oneCompte.php"><?php echo $cpt['id'] ?></a></li>
+       <?php endforeach; ?>
+    </ul>
 
 
   <?php
