@@ -40,6 +40,18 @@ class Manager{
   return $compte;
   }
 
+// --------------------select by id
+// -------------------------------------
+
+  public function selectById($id){
+  $req=connection()->prepare('SELECT id,name,sold FROM compte WHERE id=:id');
+  $req->execute(array(
+  'id'=>$id
+));
+  $compte=$req->fetch(PDO::FETCH_ASSOC);
+  return $compte;
+}
+
   // ---------------methode update
   // -------------------------------
   public function update($compte){

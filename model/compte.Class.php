@@ -54,6 +54,18 @@ public function getId(){
  public function getSold(){
    return $this->_sold;
  }
+ // --------------add money
+ // --------------------------
+public function addMoney($sold){
+  $this->_sold +=$sold;
+  $this->setSold($this->setSold);
+}
+
+
+// --------------pullMoney
+// ----------------------------
+
+
 
 }
 
