@@ -24,8 +24,6 @@
 
 
     <a class='dropdown-button btn red accent-4' href='#' data-activates='dropdown1'>select account to delete</a>
-
-    <!-- Dropdown Structure -->
     <ul id='dropdown1' class='dropdown-content '>
       <?php foreach ($compte as $cpt): ?>
     <li><a href="../controllers/delete.php?id=<?php echo $cpt['id']?>"><?php echo $cpt['id'] ?></a></li>
