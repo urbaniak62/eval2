@@ -62,9 +62,12 @@ public function addMoney($sold){
 }
 
 
-// --------------pullMoney
+// --------------removeMoney
 // ----------------------------
-
+public function removeMoney($sold){
+  $this->_sold -=$sold;
+  $this->setSold($this->_sold);
+}
 
 
 }

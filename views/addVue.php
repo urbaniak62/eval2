@@ -1,11 +1,8 @@
 <?php require_once('template/header.php') ?>
 
-
-
-
   <div class="row">
     <form class="col s12" method="post">
-      
+
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
@@ -24,10 +21,5 @@
 
     </form>
   </div>
-
-
-
-
-
 
 <?php require_once('template/footer.php') ?>
