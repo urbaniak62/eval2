@@ -16,5 +16,9 @@
    <input type="hidden" name="id" value=" <?php echo $cpt['id']; ?>">
    <a href="../controllers/index.php"><input type="submit" name="pull" value="pull"></a>
  </form>
+  <div class=" container img">
+      <img src="../assets/img/caisseDepargne.jpg" alt="">
+  </div>
+
 
 <?php require_once('template/footer.php') ?>

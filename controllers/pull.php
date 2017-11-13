@@ -19,8 +19,8 @@ $virement= new Compte($virer);
 $virement->addMoney($_POST['somme']);
 $manager1->update($virement);
 var_dump($virement);
-var_dump($_POST);
-// header('location:index.php');
+var_dump($_POST); 
+header('location:index.php');
 }
 
 

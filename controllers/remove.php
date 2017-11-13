@@ -18,8 +18,8 @@ $debiter=$manager1->selectById($_POST['id']);
 $remove= new Compte($debiter);
 $remove->removeMoney($_POST['somme']);
 $manager1->update($remove);
-var_dump($remove);
-var_dump($_POST);
+// var_dump($remove);
+// var_dump($_POST);
 header('location:index.php');
 }
 

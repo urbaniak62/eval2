@@ -20,6 +20,10 @@
       </button>
 
     </form>
+    <div class=" container img">
+      <img src="../assets/img/caisseDepargne.jpg" alt="">
+    </div>
+
   </div>
 
 <?php require_once('template/footer.php') ?>

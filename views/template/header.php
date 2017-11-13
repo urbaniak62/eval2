@@ -25,15 +25,14 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="left hide-on-med-and-down">
           <li><a href="../controllers/pull.php">pull</a></li>
-          <li><a href="#">transfert</a></li>
+          <li><a href="../controllers/transfert.php">transfert</a></li>
           <li><a href="../controllers/add.php">add</a></li>
           <li class="active"><a href="../controllers/remove.php">remove</a></li>
 
         </ul>
         <ul class="side-nav" id="mobile-demo red darken-4">
           <li><a href="#">pull</a></li>
-
-          <li><a href="#">transfert</a></li>
+         <li><a href="#">transfert</a></li>
           <li><a href="#">add</a></li>
           <li class="active"><a href="../controllers/remove.php">remove</a></li>
         </ul>

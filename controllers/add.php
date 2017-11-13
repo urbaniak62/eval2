@@ -8,10 +8,11 @@ $manager1=new Manager('crud');
 
 if (isset($_POST['name']) && isset($_POST['sold'])) {
   $add=new Compte($_POST);
-  var_dump($_POST);
-  var_dump($add);
+  // var_dump($_POST);
+  // var_dump($add);
   $manager1->insert($add);
-  var_dump($manager1);
+  // var_dump($manager1);
+  header('location:index.php');
 }
 
 
