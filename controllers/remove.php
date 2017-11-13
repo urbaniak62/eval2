@@ -9,7 +9,7 @@ $manager1=new Manager('crud');
 $compte=$manager1->select();
 
 if (isset($_POST['remove']) && isset($_POST['remove'])) {
-  $pull=$_POST['remove'];
+  $remov=$_POST['remove'];
 
 
 $debiter=$manager1->selectById($_POST['id']);

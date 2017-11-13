@@ -68,14 +68,17 @@ public function removeMoney($sold){
   $this->_sold -=$sold;
   $this->setSold($this->_sold);
 }
-public function transfertMoney($soldA,$soldB){
-  if($this->_sold==$soldA){
-    $soldA-=$this->_sold;
-    $soldB+=$this->_sold;
-    $this->setSold->_sold;
-  }
-}
 
+
+// public function transfertMoney($soldA,$soldB){
+//   if($this->_sold==$soldA){
+//     $soldA-=$this->_sold;
+//     $this->setSold($this->_sold);
+//     $soldB+=$this->_sold;
+//     $this->setSold($this->_sold);
+//   }
+// }
+ 
 
 }
 

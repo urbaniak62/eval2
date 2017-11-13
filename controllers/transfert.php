@@ -7,19 +7,20 @@ $manager1=new Manager('crud');
 
 $compte=$manager1->select();
 
-if (isset($_POST['transfer']) && isset($_POST['id'])) {
-    $pull=$_POST['remove'];
+if (isset($_POST['transfert']) && isset($_POST['id']) && isset($_POST['somme'])) {
+    $transfert=$_POST['transfert'];
   
   
-  $transfer=$manager1->selectById($_POST['id']);
-   var_dump($transfer);
+  $transfert=$manager1->selectById($_POST['id']);
+  //  var_dump($transfert);
   
-  $transferer= new Compte($transfer);
-  $transferer->transferMoney($_POST['somme']);
-  $manager1->update($transfer);
-  var_dump($transferer);
-  var_dump($_POST);
-  header('location:index.php');
+  $transferer= new Compte($transfert);
+  $transferer->removeMoney($_POST['somme']);
+  $transferer->addMoney($_POST['somme']);
+  $manager1->update($transferer);
+   var_dump($transferer);
+    var_dump($_POST);
+  //  header('location:index.php');
   }
   
 
