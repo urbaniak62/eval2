@@ -21,8 +21,8 @@
         <script src="../assets/js/plugins.js"></script>
         <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="../assets/js/materialize.js"></script>
-        <script src="../assets/js/main.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+        <script src="../assets/js/main.js"></script>
 
 
 
