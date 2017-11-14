@@ -3,12 +3,18 @@
   <div class="row">
     <form class="col s12" method="post">
 
+    <!-- write name of new account -->
+
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
           <input id="icon_prefix" type="text" name="name"class="validate">
           <label for="name">name of account</label>
         </div>
+
+        <!-- write sold who you want to attribute -->
+
+        
         <div class="input-field col s6">
           <i class="material-icons prefix">attach_money</i>
           <input id="icon_telephone" type="text" name="sold" class="validate">

@@ -1,24 +1,32 @@
 <?php require_once('template/header.php'); ?>
 
 <form action="" method="post">
-<a class='dropdown-button btn red accent-4' href='#' data-activates='dropdown1'>select account to debite</a>
-<ul id='dropdown1' class='dropdown-content '>
-  <?php foreach ($compte as $cpt): ?>
-  <li><a href="../controllers/transfert.php?name=<?php echo $cpt['name'];?>"><?php echo $cpt['name'] ?></a></li>
-   <?php endforeach; ?>
-</ul>
- <?php if (isset($_GET['name'])) { ?>
-   <input type="text" name="somme1" value="<?php echo $_GET['name']; ?>">
- <?php } ?>
 
-  <button type="text">select account to credite : </button>
-<select>
+<!-- select account to remove -->
+
+<label for="">compte à debiter</label>
+<select name="debiteur">
   <?php foreach ($compte as $cpt): ?>
-    <option><?php echo $cpt['name']; ?></option>
+    <option value="<?php echo $cpt['id']; ?>" ><?php echo $cpt['name'] . " " . $cpt['sold'] . " euros"; ?></option>
   <?php endforeach; ?> 
 </select>
+<br>
+<br>
 
-   <input type="text" name="somme2" value="" placeholder="somme">
+<!-- select account to pull -->
+ 
+<label for="">compte à crediter</label>
+  <select name="crediteur">
+  <?php foreach ($compte as $cpt): ?>
+    <option value="<?php echo $cpt['id']; ?>" ><?php echo $cpt['name'] . " " . $cpt['sold'] . " euros"; ?></option>
+  <?php endforeach; ?> 
+  </select>
+
+  <br>
+  <br>
+<!-- select sold to transfer -->
+   <label for="">montant à transferer</label>
+   <input type="text" name="somme3" value="" placeholder="somme">
    <input type="hidden" name="id" value=" <?php echo $cpt['id']; ?>">
    <a href="#"><input type="submit" name="transfert" value="transfert"></a>
  </form>

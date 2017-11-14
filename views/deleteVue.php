@@ -11,6 +11,11 @@
               <div class="card-action">
               <form class="" action=""method="post">
                 <a href="../controllers/index.php">go back</a>
+
+                
+                <!-- slect account to dellete -->
+
+
                 <input type="hidden" name="id" value="<?php echo $compte['id']; ?>">
                 <a href="../controllers/index.php"><input type="submit" name="delete" value="delete"></a>
               </form>
