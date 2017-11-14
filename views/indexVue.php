@@ -29,7 +29,9 @@
     <li><a href="../controllers/delete.php?id=<?php echo $cpt['id']?>"><?php echo $cpt['id'] ?></a></li>
        <?php endforeach; ?>
     </ul>
-
+    <div class=" container img">
+      <img src="../assets/img/caisseDepargne.jpg" alt="">
+    </div>
 
   <?php
    include("template/footer.php")

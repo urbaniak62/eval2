@@ -13,12 +13,14 @@ if (isset($_POST['pull']) && isset($_POST['id'])) {
 
 
 $virer=$manager1->selectById($_POST['id']);
-var_dump($virer);
+// var_dump($virer);
 
 $virement= new Compte($virer);
 $virement->addMoney($_POST['somme']);
 $manager1->update($virement);
-
+// var_dump($virement);
+// var_dump($_POST); 
+header('location:index.php');
 }
 
 
